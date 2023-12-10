@@ -29,6 +29,8 @@ server=/*.weixin.com/119.28.28.28
 server=/*.bilibili.com/119.29.29.29
 
 [policy]
+# Auto-Japen
+url-latency-benchmark=Auto-JP, server-tag-regex=(?=.*(日|JP|(?i)Japan))^((?!(港|台|韩|新|美)).)*$, check-interval=600, tolerance=0, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/JP.png
 # United States
 static= US, server-tag-regex=美|美国|美|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|🇺🇸|US|United, img-url=https://raw.githubusercontent.com/erdongchanyo/icon/main/Policy-Country/US.png
 # Hong Kong
@@ -42,62 +44,81 @@ static= SG, server-tag-regex=狮城|新|新加坡|🇸🇬|SG|Singapore, img-url
 # Korea
 static= KR, server-tag-regex=韩|韓|朝|KR|(?i)Korea, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/KR.png
 # Special
-static= Special, server-tag-regex=^(?!.*(港|台|日|韩|坡|美|HK|US|TW|JP|SG|Hong|Tai|Japan|Singapore|States)), img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/Static.png
+static= Special, server-tag-regex=^(?!.*(港|台|日|韩|坡|美|HK|US|TW|JP|SG|Hong|Tai|Japan|Singapore|States)), img-url=https://raw.githubusercontent.com/erdongchanyo/icon/main/Policy-Filter/Final01.png
 
 # > Telegram策略
 static=Telegram, JP, HK, img-url=https://raw.githubusercontent.com/erdongchanyo/icon/main/Policy-Filter/Telegram.png
-# > Youtibe策略
+# > Apple策略
+static=Apple, US, JP, img-url=https://raw.githubusercontent.com/erdongchanyo/icon/main/Policy-Filter/Apple.png
+# > YouTube策略
 static=YouTube, HK, JP, TW, img-url=https://raw.githubusercontent.com/erdongchanyo/icon/main/Policy-Filter/Youtube.png
 # > Netflix策略
 static=Netflix, SG, TW, HK, JP, img-url=https://raw.githubusercontent.com/erdongchanyo/icon/main/Policy-Filter/Netflix.png
 # > Disney+策略
 static=Disney+, SG, TW, HK, JP, img-url=https://raw.githubusercontent.com/erdongchanyo/icon/main/Policy-Filter/Disney+.png
-# > TikTok策略
-static=TikTok, HK, TW, JP, img-url=https://raw.githubusercontent.com/erdongchanyo/icon/main/Policy-Filter/Tiktok.png
 # > Spotify策略
 static=Spotify, US, HK, KR, TW, img-url=https://raw.githubusercontent.com/erdongchanyo/icon/main/Policy-Filter/Spotify.png
-
-static=全球加速, 香港节点, 台湾节点, 日本节点, 韩国节点, 狮城节点, 美国节点, 特殊节点, proxy, direct, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/Global.png
-static=苹果服务, 香港节点, 台湾节点, 日本节点, 韩国节点, 狮城节点, 美国节点, 特殊节点, proxy, direct, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/Apple.png
-static=港台番剧, 香港节点, 台湾节点, direct, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/StreamingSE.png
-static=国际媒体, 香港节点, 台湾节点, 日本节点, 韩国节点, 狮城节点, 美国节点, 特殊节点, proxy, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/Streaming.png
-static=电报代理, 狮城节点, proxy, direct, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/Telegram.png
-static=黑白名单, 香港节点, 台湾节点, 日本节点, 韩国节点, 狮城节点, 美国节点, 特殊节点, proxy, direct, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/Final.png
-
-url-latency-benchmark=香港节点, server-tag-regex=(?=.*(港|HK|(?i)Hong))^((?!(台|日|韩|新|美)).)*$, check-interval=600, tolerance=0, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/HK.png
-url-latency-benchmark=台湾节点, server-tag-regex=(?=.*(台|TW|(?i)Taiwan))^((?!(港|日|韩|新|美)).)*$, check-interval=600, tolerance=0, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/TW.png
-url-latency-benchmark=日本节点, server-tag-regex=(?=.*(日|JP|(?i)Japan))^((?!(港|台|韩|新|美)).)*$, check-interval=600, tolerance=0, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/JP.png
-url-latency-benchmark=韩国节点, server-tag-regex=(?=.*(韩|韓|朝|KR|(?i)Korea))^((?!(港|台|日|新|美)).)*$, check-interval=600, tolerance=0, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/KR.png
-url-latency-benchmark=狮城节点, server-tag-regex=(?=.*(新|狮|獅|SG|(?i)Singapore))^((?!(港|台|日|韩|兰|美)).)*$, check-interval=600, tolerance=0, alive-checking=false, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/SG.png
-url-latency-benchmark=美国节点, server-tag-regex=(?=.*(美|US|(?i)States|American))^((?!(港|台|日|韩|新)).)*$, check-interval=600, tolerance=0, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/US.png
+# > Google策略
+static=Google, HK, SG, JP, img-url=https://raw.githubusercontent.com/erdongchanyo/icon/main/Policy-Filter/Google.png
+# > TikTok策略
+static=TikTok, HK, TW, JP, img-url=https://raw.githubusercontent.com/erdongchanyo/icon/main/Policy-Filter/Tiktok.png
+# > Advertising策略
+static=Advertising, direct, reject, img-url=https://raw.githubusercontent.com/erdongchanyo/icon/main/Policy-Filter/AdBlock.png
 
 [server_remote]
+https://api.fuqing.ch/sub?target=quanx&list=true&emoji=true&tfo=true&udp=true&scv=true&url=https%3A%2F%2Ffuqing.ch%2Fsubscribe%2Fbneynz-x7zhkuks, tag=WestData, img-url=w.circle.fill.system, update-interval=172800, opt-parser=false, enabled=true
+https://subscroptoinwtyhikqsoc00638web3699rst2.okyrin.com/api/v1/client/subscribe?token=9a361cbef23efe7318e604d783143ac0, tag=火麒麟, img-url=multiply.system, update-interval=172800, opt-parser=false, enabled=true
+https://012.msclm.me/api/v1/client/subscribe?token=30b7b89b414b48cfd93acf60dd7a7816, tag=clm, img-url=coloncurrencysign.system, update-interval=172800, opt-parser=false, enabled=false
+https://cxk.lol/api/v1/client/subscribe?token=98b0bb3caeb9f508667b49706cc45352, tag=Dark, update-interval=172800, opt-parser=false, enabled=false
+https://xsus.moe/api/v1/client/subscribe?token=d49b998cd4b3ed709e3bcb4cde4506d8, tag=xsus, img-url=shekelsign.system, update-interval=172800, opt-parser=false, enabled=false
+https://v4.dogapi.yachts/api/v1/client/subscribe?token=ed8f28849b8a364db79011b5a4bdc947, tag=泡泡狗, img-url=arrow.down.right.and.arrow.up.left.circle.system, update-interval=172800, opt-parser=false, enabled=false
+https://ww.pikachu.cyou/api/v1/client/subscribe?token=e1494a2eed55878ae9d8145c335183eb, tag=宝可梦, img-url=b.circle.fill.system, update-interval=172800, opt-parser=false, enabled=false
+https://kiking1223.xn--l6q948csgdz41ai1y.com/api/v1/client/subscribe?token=4966ce4853f6dd603a12976268c8d1de, tag=农家, img-url=pencil.tip.crop.circle.system, update-interval=172800, opt-parser=false, enabled=false
+https://sub.qiduo.eu.org/link/ucHE8bJhzY7TIERu?mu=1, tag=自由鲸, update-interval=172800, opt-parser=false, enabled=false
+https://v2.dogapi.yachts/api/v1/client/subscribe?token=9e1361276b54eb4998536b141bf3f346, tag=paopao, img-url=doc.append.system, update-interval=172800, opt-parser=false, enabled=false
+https://api.haita.io/api/v1/client/subscribe?token=9c649ec9721768516de6256512be86bd, tag=haita, img-url=h.circle.fill.system, update-interval=172800, opt-parser=false, enabled=false
 
 [filter_remote]
-https://raw.githubusercontent.com/ConnersHua/RuleGo/master/Surge/Ruleset/Direct+.list, tag=直连修正, force-policy=direct, update-interval=172800, opt-parser=true, enabled=true
-https://raw.githubusercontent.com/ConnersHua/RuleGo/master/Surge/Ruleset/Extra/Reject/Advertising.list, tag=广告拦截, force-policy=reject, update-interval=172800, opt-parser=true, enabled=true
-https://raw.githubusercontent.com/ConnersHua/RuleGo/master/Surge/Ruleset/Extra/Reject/Hijacking.list, tag=运营劫持, force-policy=reject, update-interval=172800, opt-parser=true, enabled=true
-https://raw.githubusercontent.com/ConnersHua/RuleGo/master/Surge/Ruleset/Extra/Reject/Tracking.list, tag=隐私保护, force-policy=reject, update-interval=172800, opt-parser=true, enabled=true
-https://raw.githubusercontent.com/ConnersHua/RuleGo/master/Surge/Ruleset/Extra/Streaming/Video/TikTok.list, tag=海外抖音, force-policy=全球加速, update-interval=172800, opt-parser=true, enabled=true
-https://raw.githubusercontent.com/ConnersHua/RuleGo/master/Surge/Ruleset/Extra/Google/GoogleVoice.list, tag=谷歌语音, force-policy=美国节点, update-interval=172800, opt-parser=true, enabled=true
-https://raw.githubusercontent.com/ConnersHua/RuleGo/master/Surge/Ruleset/Extra/Telegram.list, tag=电报代理, force-policy=电报代理, update-interval=172800, opt-parser=true, enabled=true
-https://raw.githubusercontent.com/ConnersHua/RuleGo/master/Surge/Ruleset/Extra/Streaming/!CN.list, tag=国际媒体, force-policy=国际媒体, update-interval=172800, opt-parser=true, enabled=true
-https://raw.githubusercontent.com/ConnersHua/RuleGo/master/Surge/Ruleset/Extra/Streaming/CN.list, tag=港台番剧, force-policy=港台番剧, update-interval=172800, opt-parser=true, enabled=true
-https://raw.githubusercontent.com/ConnersHua/RuleGo/master/Surge/Ruleset/Proxy.list, tag=全球加速, force-policy=全球加速, update-interval=172800, opt-parser=true, enabled=true
-https://raw.githubusercontent.com/ConnersHua/RuleGo/master/Surge/Ruleset/Extra/Apple/Apple.list, tag=苹果服务, force-policy=苹果服务, update-interval=172800, opt-parser=true, enabled=true
-https://raw.githubusercontent.com/ConnersHua/RuleGo/master/Surge/Ruleset/Direct.list, tag=国内网站, force-policy=direct, update-interval=172800, opt-parser=true, enabled=true
-https://raw.githubusercontent.com/ConnersHua/RuleGo/master/Surge/Ruleset/Extra/WeChat.list, tag=微信直连, force-policy=direct, update-interval=172800, opt-parser=true, enabled=true
-https://raw.githubusercontent.com/ConnersHua/RuleGo/master/Surge/Ruleset/Proxy+.list, tag=代理修正, force-policy=proxy, update-interval=172800, opt-parser=true, enabled=true
+# < Telegram规则
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/Telegram/Telegram.list, tag=Telegram, force-policy=Telegram, update-interval=86400, opt-parser=false, enabled=true
+# < Apple规则
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/Apple/Apple.list, tag=Apple, force-policy=Apple, update-interval=86400, opt-parser=false, enabled=true
+# < YouTube规则
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX//YouTube/YouTube.list, tag=YouTube, force-policy=YouTube, update-interval=86400, opt-parser=false, enabled=true
+# < Netflix规则
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/Netflix/Netflix.list, tag=Netflix, force-policy=Netflix, update-interval=86400, opt-parser=false, enabled=true
+# < Disney+规则
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/Disney/Disney.list, tag=Disney+, force-policy=Disney+, update-interval=86400, opt-parser=false, enabled=true
+# < Spotify规则
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/Spotify/Spotify.list, tag=Spotify, force-policy=Spotify, update-interval=86400, opt-parser=false, enabled=true
+# < Google规则
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/Google/Google.list, tag=Google, force-policy=Google, update-interval=86400, opt-parser=false, enabled=true
+# < TikTok规则
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/TikTok/TikTok.list, tag=TikTok, force-policy=TikTok, update-interval=86400, opt-parser=false, enabled=true
+# < Advertising规则
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/Advertising/Advertising.list, tag=Advertising 规则, force-policy=Advertising, update-interval=86400, opt-parser=true, enabled=true
+# < FanQieNovel规则
+https://raw.githubusercontent.com/zqzess/rule_for_quantumultX/master/QuantumultX/rules/FanQieNovel.list, tag=FanQieNovel, force-policy=direct, update-interval=172800, opt-parser=false, enabled=true
+# < Bilibili换区
+https://raw.githubusercontent.com/Moli-X/Resources/main/Filter/Bilibili_Auto.list, tag=bilibili, force-policy=proxy, update-interval=172800, opt-parser=false, enabled=true
+# < DouYin规则
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/DouYin/DouYin.list, tag=DouYin, force-policy=direct, update-interval=172800, opt-parser=false, enabled=true
+# < OpenAI规则
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/OpenAI/OpenAI.list, tag=OpenAI, force-policy=US, update-interval=172800, opt-parser=false, enabled=true
+# < Speedtest规则
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/Speedtest/Speedtest.list, tag=Speedtest, force-policy=proxy, update-interval=86400, opt-parser=false, enabled=true
 
 [rewrite_remote]
-https://raw.githubusercontent.com/Peng-YM/Sub-Store/master/config/QX.snippet, tag=Sub Store, update-interval=172800, opt-parser=true, enabled=true
-https://raw.githubusercontent.com/chavyleung/scripts/master/box/rewrite/boxjs.rewrite.quanx.conf, tag=BoxJs, update-interval=172800, opt-parser=true, enabled=true
-https://raw.githubusercontent.com/NobyDa/Script/master/QuantumultX/TestFlightDownload.conf , tag=TestFlight区域限制解除, update-interval=172800, opt-parser=true, enabled=true
-https://raw.githubusercontent.com/Orz-3/QuantumultX/master/TikTok.conf, tag=Tiktok解锁, update-interval=172800, opt-parser=true, enabled=true
-https://raw.githubusercontent.com/ConnersHua/RuleGo/master/Surge/Module/Block/YouTubeAds.sgmodule, tag=YouTube去广告, update-interval=172800, opt-parser=true, enabled=true
-https://raw.githubusercontent.com/ddgksf2013/Rewrite/master/AdBlock/StartUp.conf, tag=墨鱼去开屏, update-interval=172800, opt-parser=true, enabled=true
-https://raw.githubusercontent.com/app2smile/rules/master/module/tieba-qx.conf, tag=贴吧去广告, update-interval=172800, opt-parser=true, enabled=true
-https://raw.githubusercontent.com/ConnersHua/RuleGo/master/Surge/Module/Block/Advertising.sgmodule, tag=神机去广告, update-interval=172800, opt-parser=true, enabled=true
+# < Qsearch重写
+https://raw.githubusercontent.com/zqzess/rule_for_quantumultX/master/QuantumultX/rewrite/QsearchMac.qxrewrite, tag=Qsearch, update-interval=172800, opt-parser=false, enabled=true
+# < FanQieNovel重写
+https://raw.githubusercontent.com/zqzess/rule_for_quantumultX/master/QuantumultX/rewrite/FanQieNovel.qxrewrite, tag=FanQieNovel, update-interval=172800, opt-parser=false, enabled=true
+# < 毒奶去网页广告重写
+https://limbopro.com/Adblock4limbo.conf, tag=毒奶特供(去网页广告计划), enabled=true
+# < Advertising重写
+https://raw.githubusercontent.com/DivineEngine/Profiles/master/Quantumult/Rewrite/Block/Advertising.conf, tag=DivineEngine (Advertising), enabled=true
+# < bilibili重写
+https://raw.githubusercontent.com/zqzess/rule_for_quantumultX/master/QuantumultX/rewrite/bilibili.qxrewrite, tag=bilibili, update-interval=172800, opt-parser=false, enabled=true
 
 [server_local]
 
@@ -111,16 +132,15 @@ ip-cidr, 100.64.0.0/10, direct
 ip-cidr, 224.0.0.0/4, direct
 ip6-cidr, fe80::/10, direct
 geoip, cn, direct
-final, 黑白名单
+final, proxy
 
 [rewrite_local]
-^https?:\/\/(www.)?(g|google)\.cn url 302 https://www.google.com
 
 [task_local]
-event-interaction https://raw.githubusercontent.com/KOP-XIAO/QuantumultX/master/Scripts/streaming-ui-check.js, tag=流媒体解锁查询, img-url=arrowtriangle.right.square.system, enabled=true
+event-interaction https://raw.githubusercontent.com/KOP-XIAO/QuantumultX/master/Scripts/geo_location.js, tag=GeoIP查询, img-url=location.fill.viewfinder.system
+event-interaction https://raw.githubusercontent.com/KOP-XIAO/QuantumultX/master/Scripts/streaming-ui-check.js, tag=流媒体解锁检测, img-url=https://raw.githubusercontent.com/erdongchanyo/icon/main/Policy-Filter/GMedia.png, enabled=true
 
 [http_backend]
 
 [mitm]
-skip_validating_cert = true
-hostname = www.google.cn
+#skip_validating_cert = true
