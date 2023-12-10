@@ -1,12 +1,18 @@
 # Quantumult X 个人配置 制作 by nieder 2023/12/10更新
 
 [general]
+# 代理延迟测速，以确认节点的可用性
 server_check_url=http://cp.cloudflare.com/generate_204
-dns_exclusion_list= *.cmpassport.com, *.jegotrip.com.cn, *.icitymobile.mobi, id6.me, *.pingan.com.cn, *.cmbchina.com
-geo_location_checker=http://ip-api.com/json/?lang=zh-CN, https://raw.githubusercontent.com/Orz-3/Orz-3/master/QuantumultX/IP.js
+# DNS排除列表
+dns_exclusion_list = *.localnetwork.uop, *.qq.com, qq.com
+#节点地理位置检查
+#geo_location_checker=http://ip-api.com/json/?lang=zh-CN, https://raw.githubusercontent.com/I-am-R-E/Functional-Store-Hub/Master/GeoLocationChecker/QuantumultX/IP-API.js
+#geo_location_checker=http://ip-api.com/json/?lang=zh-CN, https://raw.githubusercontent.com/limbopro/QuantumultX/master/Scripts/IP_API.js
+# 资源解析器
 resource_parser_url=https://fastly.jsdelivr.net/gh/KOP-XIAO/QuantumultX@master/Scripts/resource-parser.js
-excluded_routes=239.255.255.250/32
-udp_drop_list = 443
+# 排除路线：包含的内容将不经过 QuantumultX 处理
+excluded_routes=192.168.0.0/16, 10.0.0.0/8, 172.16.0.0/12, 100.64.0.0/10, 17.0.0.0/8
+#ICMP 自动回复
 icmp_auto_reply = true
 
 [dns]
