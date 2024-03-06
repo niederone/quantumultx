@@ -10,6 +10,9 @@ host-suffix, cm.adcommon.bilibili.com, reject
 host-suffix, cm.game.bilibili.com, reject
 host-suffix, cm.track.biligame.bilibili.com, reject
 
+# ======= c ======= #
+# > 菜鸟
+host-suffix,vip.cainiaofx.com, REJECT
 # ======= D ======= #
 # > 抖音
 host-keyword, bds.snssdk.com, reject
